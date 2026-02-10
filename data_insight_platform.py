@@ -161,7 +161,36 @@ def preprocess_data(df, feature_columns, label_column, handle_missing='drop', sc
         df_clean[feature_columns] = df_clean[feature_columns].fillna(df_clean[feature_columns].mean())
         df_clean[label_column] = df_clean[label_column].fillna(df_clean[label_column].mode()[0] if len(df_clean[label_column].mode()) > 0 else 0)
     
-    X = df_clean[feature_columns].values.astype(float)
+    # Robust feature handling:
+    # - Try to coerce selected feature columns to numeric
+    # - Drop columns that are completely non-numeric (all NaN after coercion)
+    # - Warn the user instead of crashing on bad data
+    numeric_feature_columns = []
+    dropped_feature_columns = []
+    for col in feature_columns:
+        # Try to convert to numeric, marking non-convertible values as NaN
+        coerced = pd.to_numeric(df_clean[col], errors='coerce')
+        if coerced.notna().sum() == 0:
+            # Column is effectively non-numeric
+            dropped_feature_columns.append(col)
+        else:
+            df_clean[col] = coerced
+            numeric_feature_columns.append(col)
+
+    if dropped_feature_columns:
+        st.warning(
+            "Ignoring non-numeric feature columns that could not be converted: "
+            + ", ".join(dropped_feature_columns)
+        )
+
+    if len(numeric_feature_columns) == 0:
+        raise ValueError(
+            "No usable numeric feature columns found after cleaning. "
+            "Please select at least one numeric feature column (e.g. counts, scores, or numeric IDs) "
+            "and avoid purely text columns like 'Dollars (millions)'."
+        )
+
+    X = df_clean[numeric_feature_columns].values.astype(float)
     y_raw = df_clean[label_column].values
     
     if y_raw.dtype == 'object' or isinstance(y_raw[0], str):

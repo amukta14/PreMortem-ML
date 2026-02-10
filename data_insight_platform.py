@@ -142,7 +142,11 @@ st.markdown('<div class="author-link">Built by <a href="https://github.com/amukt
 
 # Sidebar Navigation
 st.sidebar.title("Navigation")
-page = st.sidebar.radio("", ["Quality Analysis", "Settings"])
+page = st.sidebar.radio(
+    "Navigation",
+    ["Quality Analysis", "Settings"],
+    label_visibility="collapsed",
+)
 
 # ==================== HELPER FUNCTIONS ====================
 

@@ -48,7 +48,7 @@ The analysis currently includes detection of:
 
 The analysis summarizes the detected issues and provides an overview of dataset health.
 
-### Example Results Dashboard
+### Dashboard
 
 ![Quality Analysis Results](assets/dashboard.png)
 
@@ -71,7 +71,7 @@ Users can also download the detected issues as a CSV file for further investigat
 
 ![Issue Details](assets/qa-results.png)
 
-You can additionally show the CSV export preview:
+Here's the CSV export preview:
 
 ![Quality Analysis CSV](assets/csv-result.png)
 
@@ -93,7 +93,6 @@ These settings include:
 
 ![Settings Panel](assets/settings.png)
 
-You can also include an overall landing view:
 
 ![Landing View](assets/home.png)
 

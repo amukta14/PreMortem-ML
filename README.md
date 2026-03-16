@@ -93,9 +93,6 @@ These settings include:
 
 ![Settings Panel](assets/settings.png)
 
-
-![Landing View](assets/home.png)
-
 ---
 
 # Tech Stack

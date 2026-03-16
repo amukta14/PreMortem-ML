@@ -31,9 +31,7 @@ Capabilities include:
 
 ### Interface
 
-```markdown
-![Dataset Upload](assets/Screenshot_2026-03-16_at_5.21.40_PM-7c60dd03-5292-4995-a235-bc76f1ea8223.png)
-```
+![Dataset Upload](assets/home.png)
 
 ---
 
@@ -52,9 +50,7 @@ The analysis summarizes the detected issues and provides an overview of dataset 
 
 ### Example Results Dashboard
 
-```markdown
-![Quality Analysis Results](assets/Screenshot_2026-03-16_at_5.23.26_PM-c03c0faf-d6f6-4298-a673-9f7edb2af3d5.png)
-```
+![Quality Analysis Results](assets/dashboard.png)
 
 ---
 
@@ -73,15 +69,11 @@ Users can also download the detected issues as a CSV file for further investigat
 
 ### Detailed Issue View
 
-```markdown
-![Issue Details](assets/Screenshot_2026-03-16_at_5.23.05_PM-0a08cb77-22ba-4b6a-a6e6-e6d01f7ea452.png)
-```
+![Issue Details](assets/qa-results.png)
 
 You can additionally show the CSV export preview:
 
-```markdown
-![Quality Analysis CSV](assets/Screenshot_2026-03-16_at_5.23.01_PM-2b274b84-2bd8-4b03-882f-5302624299b4.png)
-```
+![Quality Analysis CSV](assets/csv-result.png)
 
 ---
 
@@ -99,15 +91,11 @@ These settings include:
 
 ### Settings Panel
 
-```markdown
-![Settings Panel](assets/Screenshot_2026-03-16_at_5.22.10_PM-461b0a11-148d-420e-961f-21227d5cab49.png)
-```
+![Settings Panel](assets/settings.png)
 
 You can also include an overall landing view:
 
-```markdown
-![Landing View](assets/Screenshot_2026-03-16_at_5.18.16_PM-35579390-810d-4f4d-9c8c-e0854e285b99.png)
-```
+![Landing View](assets/home.png)
 
 ---
 

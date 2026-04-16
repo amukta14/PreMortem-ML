@@ -6,6 +6,8 @@ The platform performs automated checks for common data problems such as outliers
 
 Built as an interactive web interface using Streamlit, PreMortemML enables users to upload datasets, configure feature selections, run automated analysis, and review detected issues through structured reports and visual outputs.
 
+Deployment: https://premortem-ml.onrender.com/
+
 ---
 
 # Overview
